@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Postgresql.Candidate;
 
 namespace Postgresql;
 
@@ -11,5 +12,6 @@ public static class ServiceCollectionExtensions
         services
             .Configure<PostgreSqlConfiguration>(configuration)
             .AddTransient<IBuildPostgreSqlConnection, PostgreSqlConnectionFactory>()
-            .AddTransient(x => x.GetService<IOptions<PostgreSqlConfiguration>>().Value);
+            .AddTransient(x => x.GetService<IOptions<PostgreSqlConfiguration>>().Value)
+            .AddTransient<IWriteCandidate,CandidateWriter>();
 }

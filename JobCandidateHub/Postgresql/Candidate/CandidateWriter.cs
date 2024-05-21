@@ -2,7 +2,7 @@
 
 namespace Postgresql.Candidate;
 
-public class CandidateWriter
+public class CandidateWriter : IWriteCandidate
 {
     private readonly IPostgreSqlDriver _postgreSqlDriver;
     private readonly IBuildPostgreSqlConnection _buildPostgreSqlConnection;
