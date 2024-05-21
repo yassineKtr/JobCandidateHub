@@ -7,7 +7,7 @@ public static class TableConstants
     public static readonly string CandidateTableName = "Public.Candidates";
     public static IEnumerable<string> CandidatesTableColumns = new[]
     {
-        "FirstName", "LastName", "Email", "CallTimeInterval", "LinkedinUrl", "GithubUrl", "Comment"
+        "FirstName", "LastName", "Email", "CallTimeInterval", "LinkedinUrl", "GithubUrl", "Comment", "PhoneNumber"
     };
     public static readonly string CandidateConstraint = "candidates_pkey";
 
