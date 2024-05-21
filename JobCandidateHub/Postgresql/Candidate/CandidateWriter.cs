@@ -5,12 +5,10 @@ namespace Postgresql.Candidate;
 public class CandidateWriter : IWriteCandidate
 {
     private readonly IPostgreSqlDriver _postgreSqlDriver;
-    private readonly IBuildPostgreSqlConnection _buildPostgreSqlConnection;
 
     public CandidateWriter(IPostgreSqlDriver postgreSqlDriver, IBuildPostgreSqlConnection buildPostgreSqlConnection)
     {
         _postgreSqlDriver = postgreSqlDriver;
-        _buildPostgreSqlConnection = buildPostgreSqlConnection;
     }
 
     public Task SetCandidate(Models.Candidate model)

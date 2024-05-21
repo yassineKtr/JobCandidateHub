@@ -15,5 +15,6 @@ public static class ServiceCollectionExtensions
             .AddTransient<IBuildPostgreSqlConnection, PostgreSqlConnectionFactory>()
             .AddTransient(x => x.GetService<IOptions<PostgreSqlConfiguration>>().Value)
             .AddTransient<IWriteCandidate,CandidateWriter>()
+            .AddTransient<ICandidateReader,CandidateReader>()
             .AddTransient<IPostgreSqlDriver,PostgreSqlDriver>();
 }

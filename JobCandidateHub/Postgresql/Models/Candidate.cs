@@ -2,13 +2,13 @@
 
 public class Candidate
 {
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public string PhoneNumber { get; set; }
-    public string Email { get; set; }
-    public string LinkedinUrl { get; set; }
-    public string GithubUrl { get; set; }
-    public string CallTimeInterval { get; set; }
-    public string Comment { get; set; }
+    public required string FirstName { get; set; }
+    public required string LastName { get; set; }
+    public required string PhoneNumber { get; set; }
+    public required string Email { get; set; }
+    public required string LinkedinUrl { get; set; }
+    public required string GithubUrl { get; set; }
+    public required string CallTimeInterval { get; set; }
+    public required string Comment { get; set; }
 
 }
