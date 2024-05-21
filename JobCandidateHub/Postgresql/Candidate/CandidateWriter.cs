@@ -12,4 +12,7 @@ public class CandidateWriter
         _postgreSqlDriver = postgreSqlDriver;
         _buildPostgreSqlConnection = buildPostgreSqlConnection;
     }
+
+    public Task SetCandidate(Models.Candidate model)
+        => _postgreSqlDriver.Upsert(TableConstants.CandidateTableName, TableConstants.CandidatesTableColumns, model, TableConstants.CandidateConstraint);
 }
